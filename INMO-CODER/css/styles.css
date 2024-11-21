@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400,800&display=swap');
+
+*{
+        
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-color: #fff59d;   
+
+}
+.header{
+    background-color: #1b3039;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.header .logo{          /*TRANFORMA LA FELCHA DEL CURSOR EN UNA MANO CUANDO ESTA ENCIMA DEL LOGO O DEL NAV LINKS */
+    cursor: pointer;
+}
+
+.header .logo img{
+    height: 120px;
+    width: auto;
+}
+
+.header .logo img:hover{     /*CUANDO EL CURSOR SE ACERCA AL LOGO ENTONCES HACE UN EFECTO MINIMO DE AGRANDAMIENTO*/
+    transform: scale(1.2);}
+
+.header .nav-links{         /*ESTO HACE QUE DESAPARESCAN LOS PUNTOS DE LOS BOTONES DE NAVEGACION NAV LINKS */ 
+    list-style: none;
+}
+
+.header .nav-links li{      /*ESTO LO QUE VA HACER ES ALINEAR EN UNA SOLA LINEAS LOS BOTONES DE NAVEGACION*/
+    display: inline-block;
+    padding: 0 20px;
+}
+g
+.header .nav-links li:hover{  /*ESTO VA AGRANDAR LOS BOTONES DE NAVEGACION CUANDO EL MOUSE LOS TOQUE O SE ACERQUE */
+    transform: scale(1.1);
+}
+.header .nav-links a{
+    font-size: 700;
+    color:#eceff1;  /*le va dar color blanco a las letras para que dejen de ser violetas*/
+    text-decoration: none; /*para quitar la lineas debate de los enlaces*/
+
+}
+.header .nav-links li a:hover{   /*ESTO LE VA DAR COLOR AMARILLO CADA VEZ QUE EL MOUSE PASE POR ENCIMA DE LOS BOTONES NAV*/
+    color: #ffbc0e;
+}
+
+/* Estilos para el menú hamburguesa */
+.menu-toggle {
+    display: none; /* Ocultar por defecto */
+}
+
+.hamburger {
+    display: none; /* Ocultar por defecto */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    height: 4px;
+    width: 25px;
+    background-color: #eceff1;
+    margin: 4px 0;
+}
+
+
+
+
+
+/* ESTAS SON LAS CARD DE LA PAGINA PRINCIPAL HTML INDEX*/
+
+.news-cards a:hover {          /*con este lo que hago es que cada vez que posiciono el raton sobre "LEER MAS " se subraya   */
+    text-decoration:underline;
+}
+
+
+.news-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;   /*CON ESTO YO ACLARO QUE QUIERO 4 COLUMMAS DE LOS EJERCICIOS*/
+    gap:25px; /*para que se separen el margen de las noticias imagenes*/
+    margin: 10px 0; /*separacion entre las fotos de las noticias*/
+}
+
+
+.news-cards img {
+    width: 100%;
+    height: 350px;  /*ALTURA (ALTURA DEL TUTORIAL ES 180PX PERO COMO MI  IMAGEN ES MAS LARGA LE PONGO 350 */
+    
+}
+
+.news-cards h3 {   /*aca vamos a modificar las letras de las noticias*/
+    font-size: 20px;
+    margin:10px 0; /*margen entre titutlo de la noticia y cuerpo de la noticias de las fotos pequeña */
+}
+
+.news-cards a {    /*el enlace " LEER MAS " aca lo modificamos las caractaristicas*/
+    padding: 10px 0;
+    color: #0a0000;
+    text-transform: uppercase; /*para que este mayuscula*/
+    display: inline-block;
+    font-weight: bold;
+
+}
+
+.news-cards a:hover {          /*con este lo que hago es que cada vez que posiciono el raton sobre "LEER MAS " se subraya   */
+    text-decoration:underline;
+}
+
+/*CARDS BANNER ONE*/
+.cards-banner-one{
+width:100%;
+height: 350px;
+background:url('./img/imagen\ fondo\ abajo.jpg');
+margin-bottom: 40px;
+
+}
+
+
+
+
+/*ACA COMIENDZA EL MAIN CON EL RECUADRO DE EJEMPLO DE USO DE GRID*/
+/* EJEMPLO GRID CUADRO CON IMAGENES */
+
+.store-main-section h1{   /*ESTO LE VA DAR LAS CARACTERISTICAS LETRAS TITULO DE LA PAGINA*/
+    text-align: center;   /*lo centra*/
+    font-size: 2rem;    
+    text-shadow: 1px 5px #8ba303; /*le da un sombreado a las letras pixeles izquierda eje x pixeles derecha ejey*/
+}
+
+.store-grid-container {
+
+    display: grid;   
+    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;  /*2 FILAS Y 4 COLUMNAS HECHAS CON GRID*/
+    grid-template-areas: 
+        "skin1 skin2 skin4 skin5"
+        "skin1 skin3 skin4 skin6";
+    justify-items: stretch;
+    align-items: stretch;
+    height: 500px;  /*le da mas tamañao y lo proporciona mas para que quede mas cuadriculado*/
+    gap:10px 10px; /*le de una separacion o mas bien un espacio entre filas y columnas*/
+    margin: 0;
+    padding: 0;
+}
+
+.grid-item-1{  
+    grid-area: skin1;       
+}
+.grid-item-2{
+    grid-area: skin2;    }
+
+.grid-item-3{
+    grid-area: skin3;    
+}
+.grid-item-4{
+    grid-area: skin4;    
+}
+.grid-item-5{
+    grid-area: skin5;    
+}
+.grid-item-6{
+    grid-area: skin6;    
+}
+
+
+
+/*ACA VA COMENZAR LOS CODIGOS PARA LA PAGINA DE CONTACTO*/
+
+
+body {
+    background: #181818;
+    color: #fff;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.logo {
+    text-align: center;
+    font-size: 3em;
+}
+
+.logo span {
+    color: #B70E21;
+}
+
+.contact-wrapper {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.contact-wrapper > * {
+    padding: 1em;
+}
+
+.contact-form {
+    background: #222222;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+}
+
+.contact-form form button {
+    background: #B70E21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+/* CONTACT INFO */
+.contact-info {
+    background: #000;
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+
+/*ACA COMIENZA CSS DE FOOTER*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    font-family: sans-serif;
+    text-transform: capitalize;/*esto hace que aparesca en mayuscula la primera palabra*/
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.caja{
+    width:50%;
+    height: 50vh;
+    background-color: lightblue;
+    border: 2px solid blue;
+    text-align: center;
+    line-height: 100px;
+    margin: 500px 0;
+    gap:250px;
+
+
+
+}
+
+
+.footer {
+    background-color: #24262B;
+    padding: 80px 0;
+
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links{
+    width: 25%;             /*esto al parecer dejaria espacio entre las columnas */    
+    padding: 0 15px;
+}
+
+.footer-links h4{
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 500;
+    border-bottom: 2px solid #00C3FF;
+    padding-bottom: 10px;
+    display: inline-block;  /*mantiene el subrayado al limite de la palabra*/
+}
+
+.footer-links ul li a {
+    font-size: 18px;  /*tamaño de las letras*/
+    text-decoration: none;
+    color:#BBBBBB;  /*le quita el color violeta a los enlaces*/
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-links ul li a:hover{    /*LE DA UNA ANIMACION CADA VEZ QUE EL CURSOR SE ACERCA A LOS BOTONES DEL FOOTER*/
+    color: #FFFFFF;
+    padding-left: 6px;
+}
+
+.social-link a {   /*LE DA TODAS LAS CARACTERISTICAS A LOS BOTONES REDES SOCIALES*/
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255, 0.2);
+    margin:  0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;   /*redondea los iconos*/
+    color: #FFFFFF;
+    transition: ALL;
+}
+
+
+.social-link a:hover{   /*HACE QUE CUANDO SE ACERQUE EL CURSOR A LOS ICONOS SE PONGAN AZULES*/
+    background-color: #00C3FF;
+}
+
+
+
+
+
+/*RESPONSIVE*/
+
+
+/* Estilos para dispositivos móviles */
+    @media (max-width: 768px) {
+        .header .nav-links {
+            display: none; /* Ocultar el menú de navegación por defecto */
+            flex-direction: column; /* Cambiar a columna para el menú desplegable */
+            width: 100%; /* Asegurar que ocupe todo el ancho */
+            position: absolute; /* Posicionar absolutamente */
+            top: 85px; /* Justo debajo del header */
+            left: 0; /* Alinear a la izquierda */
+            background-color: #1b3039; /* Fondo del menú */
+            z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+        }
+        
+        .menu-toggle:checked + .hamburger + nav .nav-links {
+            display: flex; /* Mostrar el menú cuando el checkbox está marcado */
+        }
+    
+        .hamburger {
+            display: flex; /* Mostrar el menú hamburguesa en dispositivos móviles */
+        }
+    }
+
+
+
+
+
+
+
+/*VERSION MOBILE*/
+
+@media  (max-width:500px){
+
+
+    /*MAIN CUERPO*/
+
+    .news-cards {
+    display: grid;
+    grid-template-columns: 1fr;   /*CON ESTO YO ACLARO QUE QUIERO 1 COLUMMA EN LA VERSION MOVIL */
+    gap:25px; /*para que se separen el margen de las noticias imagenes*/
+    margin: 60px 0; /*separacion entre las fotos de las noticias*/
+    text-align: left;    
+    }
+
+
+    /*FOOTER*/
+
+    .footer-row {
+        text-align: center;
+    }
+
+    .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }    
+}
+
+
+
+/*TABLET*/
+/*desde 501px hasta 950px */
+
+@media  (min-width: 501px) and (max-width:950px){
+   
+
+
+}
+
+
+
+
+
+
+
+
